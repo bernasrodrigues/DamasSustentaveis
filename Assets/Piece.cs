@@ -290,10 +290,7 @@ public class Piece : MonoBehaviour
             SelectedLight.SetActive(true);
 
 
-            if(Input.GetKeyDown("space"))
-        {
-                Destroy(gameObject);
-            }
+            
 
         }
         else

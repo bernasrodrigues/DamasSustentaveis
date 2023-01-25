@@ -114,6 +114,33 @@ public class CheckersBoard : MonoBehaviour
 
         }
 
+
+        if (Input.GetKeyDown("space"))
+        {
+            if (selectedPiece != null) {
+
+                if (selectedPiece.isWhite)
+                {
+                    resourcesWhite += 2;
+                }
+                else resourcesBlack += 2;
+
+                Destroy(selectedPiece.gameObject);
+                resourceDisplay.UpdateValues(resourcesWhite, resourcesBlack, isWhiteTurn);
+                moveIndicator.RemoveIndicators();
+
+
+            }
+
+        }
+
+        if (Input.GetKeyDown("return"))
+        {
+            ChangeTurn();
+            resourceDisplay.UpdateValues(resourcesWhite, resourcesBlack, isWhiteTurn);
+
+        }
+
     }
 
     private void CalculateResourcesSpent( int initialX , int finalX , bool isKing)
