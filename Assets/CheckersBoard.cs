@@ -128,8 +128,6 @@ public class CheckersBoard : MonoBehaviour
                 Destroy(selectedPiece.gameObject);
                 resourceDisplay.UpdateValues(resourcesWhite, resourcesBlack, isWhiteTurn);
                 moveIndicator.RemoveIndicators();
-
-
             }
 
         }
